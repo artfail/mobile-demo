@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class DeviceOrient : MonoBehaviour
 {
     public Text outText;
-    public Transform bubble;
+    public Transform pointer;
 
     void Update()
     {
@@ -14,16 +14,16 @@ public class DeviceOrient : MonoBehaviour
         switch (Input.deviceOrientation)
         {
             case DeviceOrientation.Portrait:
-                bubble.eulerAngles = new Vector3(0, 0, 90);
+                pointer.eulerAngles = new Vector3(0, 0, 90);
                 break;
             case DeviceOrientation.PortraitUpsideDown:
-                bubble.eulerAngles = new Vector3(0, 0, -90);
+                pointer.eulerAngles = new Vector3(0, 0, -90);
                 break;
             case DeviceOrientation.LandscapeLeft:
-                bubble.eulerAngles = new Vector3(0, 0, 0);
+                pointer.eulerAngles = new Vector3(0, 0, 0);
                 break;
             case DeviceOrientation.LandscapeRight:
-                bubble.eulerAngles = new Vector3(0, 0, 180);
+                pointer.eulerAngles = new Vector3(0, 0, 180);
                 break;
             default:
                 break;
